@@ -1,0 +1,26 @@
+
+body {
+    font-family: arial;
+    background-color:rgb(131, 122, 122);
+    
+    
+    
+}
+
+p    {
+      color: yellow;
+     }
+
+
+img{
+    width: 500;
+    height: 300;
+    
+}
+a{
+     font-size: 35px;
+     text-align: right;
+}
+
+
+ 
