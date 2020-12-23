@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <title>Multi</title>
+        <h3>โปรแกรมสูตรคูณ</h3>
+    <script>
+        function fun(n) {
+            div = document.getElementById('disp')
+            div.innerHTML = ''
+            table = `` 
+
+            for (i = 1; i <= 12; i++) {
+                table += `<tr>
+                            <td>${n} x ${i} = </td>
+                            <td>${n*i}</td>
+                        </tr>`
+                
+        }
+        div.innerHTML = table
+    }
+    
+    </script>
+    </head>
+    <body align=center>
+        <input type="text" placeholder="ใส่เลขที่ต้องการให้แสดง" onkeyup="fun(this.value);">
+        <table border="1" align=center>
+        <tbody id="disp">
+    
+        </tbody>
+        </table>
+    </body>
+    
+</html>
