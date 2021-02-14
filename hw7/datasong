@@ -1,0 +1,517 @@
+ CREATE TABLE Artist (
+        BandID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        BandName VARCHAR(100) NOT NULL,
+        Member INT NOT NULL
+        );
+
+    CREATE TABLE Style(
+        StyleID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        StyleName VARCHAR(100) NULL
+        );
+    
+    CREATE TABLE Music(
+        MusicID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        MusicName VARCHAR(100) NOT NULL,
+        BandID VARCHAR(100) NOT NULL REFERENCES Artist(BandID),
+        StyleID VARCHAR(100) NOT NULL REFERENCES Style(StyleID),
+        Lyrics VARCHAR(2000) NOT NULL,
+        AlbumID VARCHAR(100) NULL REFERENCES Album(AlbumID),
+        SongLenght TIME NOT NULL
+        );
+
+    CREATE TABLE Album(
+        AlbumID int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        AlbumCoverPhoto VARCHAR(100) NOT NULL,
+        AlbumName VARCHAR(100) NOT NULL,
+        BandID VARCHAR(100) NOT NULL REFERENCES Artist(BandID),
+        StyleID VARCHAR(100) NOT NULL REFERENCES Style(StyleID),
+        ReleaseYear YEAR(4) NOT NULL
+        );
+
+
+INSERT INTO Artist (BandName, Member)
+    VALUES ('Eminem', '1');
+            ('uma', '1'),
+            ('TangBadVoice', '1'),
+            
+
+
+    INSERT INTO Style (StyleName)
+    VALUES ('HipHop'),
+            ('trap');
+
+    
+    INSERT INTO Music (MusicName,BandID,StyleID,Lyrics,AlbumID,SongLenght)
+    VALUES ('Godzilla (feat. Juice WRLD)','1','1','Uh, you re a monster
+I can swallow a bottle of alcohol and I feel like Godzilla
+ 
+Better hit the deck like the card dealer
+ 
+My whole squad s in here, walkin around the party
+ 
+A cross between a zombie apocalypse and a wife beater
+ 
+Rain beatin which is probably the
+ 
+Same reason I wrestle with mania
+ 
+Shady s in this *****  I m positive
+ 
+Considerate it to cross me
+ 
+A costly mistake if they sleepin on me though
+ 
+Hoes better get insomnia, ADHD, hydroxycut
+ 
+Pass the crevasia (Hey, hey)
+ 
+In AA, with an AK, melee, finna set it like a playdate
+ 
+Better vacate, retreat like a vacay  mayday
+ 
+This beat is cray-cray, Ray J, h-a, h-a, h-a
+ 
+Laughin  all the way to the bank  I spray flings
+ 
+They cannot tame or placate the (Ayy)
+ 
+Monster
+ 
+You be in my way? I ma feed you to the monster (Yeah)
+ 
+I m normal during the day, but at night turn to the monster (Yeah)
+ 
+When the moon shines like off road truckers
+ 
+I look like a villain outta those blockbusters
+ 
+Godzilla, hard spitter, a monster
+ 
+Hood, I look good, on the Louis V. carpet
+ 
+Fire, Godzilla, fire, monster
+ 
+Blood, I m the best one on the Louis V. carpet
+ 
+I m just a product of Slick Rick, at Onyx, told  em lick the *****
+ 
+Had  em just appalled that so many things that pissed them off
+ 
+It s impossible to list them off
+ 
+And in the midst of all this, I m in a mental hospital with a crystal ball
+ 
+Tryna see, will I still be like this tomorrow?
+ 
+Risked but all voices whisper
+ 
+My fist is far back against the wall, pencil drawn
+ 
+This is just the song to go ballistic on you
+ 
+Pistol, I m the guy with the missile launcher
+ 
+I m just the Lochness, the myhtological
+ 
+Quick to tell a ***** to go off like a fifth of Vodka
+ 
+When you twist the top of the bottle, I ma
+ 
+Monster
+ 
+You be in my way? I ma feed you to the monster (Yeah)
+ 
+I m normal during the day, but at night turn to the monster (Yeah)
+ 
+When the moon shines like off road truckers
+ 
+I look like a villain outta those blockbusters
+ 
+Godzilla, hard spitter, a monster
+ 
+Hood, I look good, on the Louis V. carpet
+ 
+Fire, Godzilla, fire, monster
+ 
+Blood, I m the best one on the Louis V. carpet
+ 
+If you never gave a damn, raise a hand
+ 
+ Cause I m about to set a trip, vacation plans
+ 
+At one point, like Myan exits, or you ll never be dead
+ 
+Dance like a motherufckin  finger, ringer, prostate exam ( Xam)
+ 
+How can I have all these fans but expire like a liar s pants, I m on fire
+ 
+And I got no plans to retire and I m still the man you admire
+ 
+These chicks are spazzin , now I am only getting more handsome and flyer
+ 
+I got  em passin  out like what you do, when you hear someone flyer
+ 
+What goes around comes around just like the blades on the chainsaws
+ 
+I caught the flaps of my Dallas stacks right off the bat like a baseball
+ 
+Like kidding, ***** I got them racks with so much ease that they call me Diddy
+ 
+Cause I make bands and I call gettin  chees a cakewalk (Cheesecake)
+ 
+***** I m a player, I m too mother****in  stingy for Cher
+ 
+Won t even lend you an ear and even pretendin  to care
+ 
+But I tell a ***** I ll marry her, chabarry her
+ 
+Face on my genital area, the original Richard Ramirez
+ 
+Christian Rivera, my lyrics never sit well so they want to give me the chair
+ 
+Like a paraplegic, and it s scary, call it Harry Carry
+ 
+ Cause every-time, I m dicking Harry, Carrey and marry a mother****in  dictionary
+ 
+I m swearin  up and down, like the **** I spit is hilarious
+ 
+It s time to put these ******* in the obituary column
+ 
+We wouldn t see eye to eye with a staring problem
+ 
+Get the shaft out like a staring column (Mark Jack)
+ 
+But you could have the packed heat
+ 
+But it s black heat, half of the bad beats
+ 
+Evil, that means take a back seat
+ 
+Take it back to fat beats with a maxy single
+ 
+Look at my rap sheets, what the tracks these people
+ 
+This my gangster ***** like apache with the cat sheet jingle
+ 
+I stack these chips, you barely got a half eaten Cheeto
+ 
+Fill  em with the venom, it ll eliminate  em
+ 
+In other words, I m innovative
+ 
+I don t want to hurt  em but I did  em in a fit of rage
+ 
+I m murderin  again, anybody willin 
+ 
+I m finna kill  em and dump all the ****in  bodies in a lake
+ 
+Obliteratin everything, incineratin and Renegade em
+ 
+And that make anybody who wanna but the pen ll frame em
+ 
+Don t nobody want it but they re gonna get it anyway
+ 
+Cause Im beginnin to feel like Im mentally ill
+ 
+Im Atilla killer, I tell em kill or be killed
+ 
+Im kill the beat, the killer, vanilla gorilla, youre bringin the killer
+ 
+Within me, out of me, you dont want to be the enemy of the demon
+ 
+Who went in me, or be recievin enemy, what stupidity, itd be
+ 
+Every bit of me is the epitome of a spitter
+ 
+When Im in the vacinity, mother****er, you better duck
+ 
+Or you finna be dead the minute you run into me
+ 
+A hundred percent of you is a fifth of a percent of me
+ 
+Im about to ****in finish you *****, Im about to fade up on you
+ 
+In a battle, Im available, Im blowin up like an inflatable
+ 
+Im undebatable, Im unavoidable, Im unevadable
+ 
+Im on the toilet bowl, I got a trailer full of money and Im paid in full
+ 
+Im not afraid to pull the-Man stop Look what Im plannin (Haha)
+ ','2','00:03:30'),
+        ('สุขาวดี','2','1','สุขาวดีฉันนั้นสุขได้แม้ด้อยชื่อเสียงหรือบารมี
+ยกมันออกจากหัวและกลับมาอยู่กับตัวเองซักนาที
+เพราะฉันกลับไม่เห็นค่ากับปัจจัยที่ใครๆก็คิดว่าดี 
+ความรักที่ผ่านไป ก็อวยพรให้เค้าไปดี
+แบบไม่คิดจะหลีก เพราะสุขที่มีของคนเรา
+มันอาจต่างกันในบางมุมมอง
+บางคนชอบเป็นคนขายมากกว่าไปฟังสิ่งที่มีคนมารุมจอง
+ชีวิตตัวเองต้อง เลือกเองและเลือกดีๆเพราะไม่มีประกันที่ไหนมันเข้ามาทันและเข้ามาคุ้มครอง
+ซักนาทีสองทีลองมาคุยกันเรื่องชีวิต
+บางเรื่องก็ดูใช่ แต่บางเรื่องไม่มีเค้าจะเป็นอย่างที่คิดซักพื้นมิลลิและการแสดงสุขาวดี
+.
+ยังคงตามหา ความสุขที่ใฝ่ฝัน
+ได้วิ่งตาม ยิ่งอยู่ไกลฉัน
+สุขาวดีอยู่ที่ใด ฉันจะไปต้องทำยังไง
+และเค้ายังสับสน ก็เคยมีสงสัย
+ถ้าไม่มีเงินมากองมีสิทธิ์มองเห็นความสุขไหม
+เมื่อพบความจริงจึงเข้าใจ สุขาวดีอยู่ที่ใจ
+.
+รู้แค่ว่าทุกข์หรือสุขผ่าน 
+ฉันไม่จับมาใส่กระบาลจนถึงขั้นยึดติด
+เพราะรู้ว่าชีวิตไม่มีกันสาด
+ถ้าเกิดจะยึดก็คงจะยึดผิด
+เคยลองนั่งคิดว่าอยากจะปล่อยให้มันเป็นไปตามทางมัน
+แต่ก็กลัวใจตัวเองจะพาเหี้ยตรงกลางคัน
+นอนตอนกลางวันและเขียนเพลงตอนกลางคืน
+ไม่ใช่ฮีโร่แต่พร้อมกระโดดขวางคุณจากทางปืน
+ไม่ว่าวันนี้หรือจะมะรืนยังยืนอยู่ในสุขาวดี
+บนชีวิตจริงอยากได้ก็เอาไป เพราะชั้นไม่คิดจริง 
+บางคราวอย่าติดชิ่ง แต่บางครั้งอะจริงจัง
+อะไรที่มีความสุขไม่ได้เดือดร้อนใครก็ทำมันไป
+ได้ยินยัง เหมือนสุขาวดีทีฉันได้ยินดัง
+มันพาให้นึกไปถึงตอนเด็กคนนึงเปิดฟังเพลง
+ก็เลือกเดินไปทางตัวเองมากกว่าทั้งๆที่ใครๆเค้าให้ราคา
+ฉันไม่มีหรอกใบปริญญา มีแต่กระดาษปากกา
+ความบ้น และโชคชะตาที่พามา
+.
+ยังคงตามหา ความสุขที่ใฝ่ฝัน
+ได้วิ่งตาม ยิ่งอยู่ไกลฉัน
+สุขาวดีอยู่ที่ใด ฉันจะไปต้องทำยังไง
+และเค้ายังสับสน ก็เคยมีสงสัย
+ถ้าไม่มีเงินมากองมีสิทธิ์มองเห็นความสุขไหม
+เมื่อพบความจริงจึงเข้าใจ สุขาวดีอยู่ที่ใจ
+','3','00:02:51'),
+        ('The Real Slim Shady','1','1','ay I have your attention, please
+May I have your attention, please
+Will the real Slim Shady, please stand up
+I repeat, will the real Slim Shady, please stand up
+Were gonna have a problem here
+Yall act like you never seen, a white person before
+Jaws all on the floor, like Pam like Tommy just burst in the door
+And started whoopin her ass, worse than before
+They first were divorced, throwin her over furniture (Ahh)
+Its the return of the, oh wait, no way, youre kidding
+He didnt just say, what I think he did, did he
+And said, nothing you idiots
+Dr. Dres dead hes locked in my basement (Haha)
+Feminist women love Eminem
+Chicka-chicka-chicka Slim Shady, Im sick of him
+Look at him, walkin around, grabbin his you know what
+Flippin to you know who, yeah…
+','4','00:04:28'),
+        ('ลิ้นติดไฟ','3','2','พี่ครับที่นี่รับสมัครคนพากย์เรือแข่งใช่ไหมอะ
+ 
+ใช่ ทำไม
+ 
+พี่จ้างผมได้ไหมอะ
+ 
+จ้างมึงเหรอ
+ 
+คือผมไม่มีงานทำอะพี่
+ 
+น้อง พากย์เรือแข่งเนี่ย มันต้องพูดรัว พูดเร็ว พูดชัด มึงทำได้เหรอ
+ 
+โอเค
+ 
+ยายมอยเลี้ยงหมี และยายมีเลี้ยงหอย ส่วนนางลีขายหอย และนางมอยขายหมี
+ยานัดของหมอมีแก้ฝีแก้หิด แต่การแพทย์ของหมอชิดแก้หิดแก้ฝี
+เอาหูหมีมาใส่ในหูหมู หนูเอาหูหมูมาใส่หูหมี หูหมู หูหนี เอาหูหมีมาใส่หูหมู 
+แต่ถ้าเธอเอาไปผัดเห็ดมันจะเป็นเห็ดหูหนู
+ 
+พลทหารถือปืน แบกปูน ไปโบกตึก
+ตกบึก หมู หมึก กุ้ง หุง อุ่น นึ่ง
+หมึกหกเลอะมุ้ง มุ้งเลอะหมดครึ่ง
+หมู หมึก กุ้ง หุง อุ่น หุง ต้ม ตุ๋น อุ่น นึ่ง
+ 
+กินมันติดเหงือก กินเผือกติดฟัน 
+กินทั้งมันกินทั้งเผือก ติดทั้งเหงือกติดทั้งฟัน
+เช้าฟาดผัดฟัก เย็นฟาดฟักผักละกันเชดโด้
+ 
+มีอีกไหมอะ
+ 
+มี !
+ 
+ตาตี่ตกต้นตาลตาตี่ตายใต้ต้นตาลร้องโอ๊ย
+ย ยักษ์รักลิง ล ลิงรักยักษ์ รักยักษ์ลิงร้อย
+สำลีขายหวย สำรวยขายสี สำลีเล่นหวย สำรวยเล่นสี
+ชูฉี ซูฉี ชูศรี ฉู่ฉี่ ซูฉี ชูศรีชอบชี้ซูชิซูฉี
+ 
+หีบมากมายหลายหีบ ยกหีบหนี
+หีบมากมี หนีหีบ หนีบหนี หีบหาย
+เห็นหนี หีบหนีบ หนีกันมากมาย
+เห็นหีบ หายหลาย เห็นหีบ หีบหนีบ
+ 
+หมาหันมา หาหมู เห็นหูหมา หูหมาหนา หมูหนี หนูหมี เห็นหมู
+น้องเห็น หมูหัน หูหนี หันดู เห็นหมา หาหมู เห็นหู ดีหาย
+ 
+ประมาณนี้พี่
+ 
+เช็ดโด้ เออ ก็ดีนะแต่ว่า คืออย่างนี้เว้ย
+ช่วงหลังเนี่ยนะ มันจะมีฝรั่งมาดูพากย์แข่งเรือเยอะ ถ้ามึงพ่นได้นิดนึงเป็นภาษาฝรั่งกูจะพิจารณา
+ 
+โอเค
+ 
+Gotta be the one that bite the bullet
+imma do it imma do it
+Like a student Like a noodle ugh
+ 
+She sell sea shells on the seashore
+but her knee sore like a senior gotta see more
+ 
+Peter Piper picked a peck of pickled peppers . (period)
+and a fig plugger fig plugger son 
+but ill plug a fig until a fucking fig plugger comes
+ 
+เบสิค
+ 
+กล้วยตานีเหี่ยวหิ้วหวีไปหวีมา เนี่ยได้ป่ะ
+ 
+เบสิค
+ 
+ระนอง ระยอง ยะลา เนี่ยได้ป่ะ
+ 
+โหพี่ เบสิค
+ 
+ชามเขียวคว่ำเช้า ชามขาวคว่ำค่ำ
+ 
+พี่เบสิค
+ 
+อาหลีเฮีย? อาเฮียหลี
+อาหลีเฮียเดินไปหาเฮียหลี
+ 
+พี่จ้างเหอะ ผมเนี่ยเล่นมาตั้งแต่เด็ก อยู่ในห้องนั่งท่อง ลิ้นพันเสียงก้อง
+เดี๋ยวก็ ซูเพล็กส์
+เดี๋ยวก็ ดูเร็กซ์
+อยู่อย่างงั้นสลับคำ
+กูเผ็ด ภูเก็ต
+จบที่ คูเว็ด
+ 
+พากย์เรือเนี่ยมันเป็นความหวัง
+ผมทำจะทำตามฝัน ผมจะไม่ทำให้ผิดหวั.. โอ๊ย
+ 
+🔥พ่นไวไป ลิ้นติดไฟ ไฟมันลุก
+พูดไวไป ลิ้นติดไฟ ไฟมันชุก ( เช็ด🐊)
+พล่ามไวไป ลิ้นนี่ชิ่งเหมือนกับสนุ๊ก
+ 
+เตรียมถังดับเพลิงมา 1 ชุด
+ไฟมันลุก ไฟมันคุก
+มันจะคุก คุกคาม
+ 
+🔥พ่นไวไป ลิ้นติดไฟ ไฟมันลุก
+พูดไวไป ลิ้นติดไฟ ไฟมันชุก โชน!
+พล่ามไวไป ลิ้นนี่ชิ่งเหมือนกับสนุ๊ก เลย
+ 
+ 
+เออ โอเคน้องพี่ก็อยากจะจ้างน้องนะแต่ขอคิดดูอีกนิดได้ป่ะ
+น้องพร้อมแค่ไหนอะ
+ 
+พร้อมบุก! ผมเนี่ยโคตรจะพร้อมสุด
+โคตรจะร้อนสุด ยังไม่พร้อมหยุด
+ไฟในปากก็พร้อมจุด ร้อนสุด
+ร้อนงาน? ร้อนเงิน
+ร้อนหนัก ร้อนเกิน ก็ดันเป็นคนที่มีหนี้
+อยากจะนั่ง แต่ต้องพร้อมเดินอย่ามาฉุด
+ผมจะพากย์เรือยาวจากวันจันทร์ถึงวันศุกร์
+ไม่มีวันหยุด ไม่มีวันหลุด
+ตั้งใจทำงานเจตนาบริสุทธิ์
+ไม่สะดุด ไม่ใช่ 18 มงกุฎ เชื่อเหอะ
+จ้างเลย โคตรจะว่างเลยโคตรจะคลั่งเลย
+ถ้าพี่ไม่จ้างตอนนี้ ผมก็จะกลับไปขายให้หมดทั้งบ้านเลย
+ให้มันว่างเลย ให้เป็นซากเลย ให้ทั้งหมดกลายป็นลานกว้างเลย
+ 
+พี่
+จ้างเลย  จ้างเลย
+ 
+กดดันกูจัง
+ 
+จ้างเลย จ้างเลย
+น้อง
+ 
+จ้างเหอะ
+กดดันสัด
+เอ่อ
+อ่ะ
+เซ็นตรงนี้
+ขอบคุณคร้าบ
+ 
+ตรงนี้ด้วย
+ได้คร้าบ
+ 
+อะมาเริ่มงานวันจันทร์นะ
+ 
+เรื่องนั้นอ่ะพี่ผมเป็นวันอังคารได้ไหม
+ 
+ทำไมอะ
+ 
+คือลิ้นผม
+พ่นไวไป ลิ้นติดไฟ ไฟมันลุก
+ 
+พูดไวไป ลิ้นติดไฟ ไฟมันชุก (โชน)
+ 
+พล่ามไวไป ลิ้นนี่ชิ่ง เหมือนสนุ๊กเลย
+ 
+เตรียมถังดับเพลิงมา 1 ชุด
+ไฟมันลุก ไฟมันชุก มันจะคุก คุกคาม
+ 
+เดี๋ยววันนี้ขอตัวก่อนนะครับ
+กลับบ้านเหรอ
+ไปโรงบาลฮะ
+','4','00:03:09'),
+        ('Walk On Water','1','1','Can you even see what youre fighting for?
+Blood lust in a holy war
+Listen up, hear the patriots shout
+Times are changing
+In the end the choice was clear
+Take a shot in the face of fear
+Fist up in the firing line
+Times are changing
+Oh oh, oh oh
+Do you believe that you can walk on water?
+Oh oh, oh oh
+Do you believe that you can win this fight tonight?
+Look at the sky, see a dying star
+White lies, its a man on fire
+Making love with the devil hurts
+Times are changing
+A thin line, the whole truth
+The far right, the left view
+Breaking all those promises made
+Times are changing
+Oh oh, oh oh
+Do you believe that you can walk on water?
+Oh oh, oh oh
+Do you believe that you can win this fight tonight?
+Oh oh, oh oh
+Do you believe that you can walk on water?
+Oh oh, oh oh
+Do you believe that you can win this fight tonight?
+Do you believe? Walk on water
+Do you believe? Walk on water
+Do you believe? Walk on water
+Do you believe? Walk on water
+Do you believe? Walk on water
+Do you believe? Walk on water
+Do you believe? Walk on water
+Do you believe? Walk on water
+Oh oh, oh oh
+Do you believe that you can walk on water?
+Oh oh, oh oh
+Do you believe that you can win this fight tonight?
+Oh oh, oh oh
+Do you believe that you can walk on water?
+Oh oh, oh oh
+Do you believe that you can win this fight tonight?
+Do you believe? Oh oh
+Walk on water
+Do you believe? Oh oh
+Walk on water
+','5','00:05:21');
+
+
+    INSERT INTO Album (AlbumCoverPhoto,AlbumName,BandID,StyleID,ReleaseYear)
+    VALUES ('1','Music To Be Murdered','1','1','2020'),
+            ('2','16 Soul Album','2','1','2018'),
+            ('3','Marshall Mathers LP Remastered Videos','1','1','2000'),
+            ('4','โนวันเพลย์วิทมี','3','2','2017'),
+            ('5','Revival','1','1','2013');
